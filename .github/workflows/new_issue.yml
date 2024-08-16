@@ -12,8 +12,8 @@ jobs:
         run: echo "new_issue=${{ toJSON(github) }}"V
       - name: Print issue details
         run: |
-          echo "New issue called: ${{ github.issue.title }} was created:"
-          echo "\t created_at:${{ github.issue.created_at }}"
-          echo "\t url:${{ github.issue.url }}"
-          echo "\t description:${{ github.issue.body }}"
+          echo "New issue called: ${{ toJSON(github).issue.title }} was created:"
+          echo "\t created_at:${{ toJSON(github).issue.created_at }}"
+          echo "\t url:${{ toJSON(github).issue.url }}"
+          echo "\t description:${{ toJSON(github).issue.body }}"
         
