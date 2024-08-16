@@ -1,5 +1,5 @@
 name: Deploy project
-on: push
+on: workflow_dispatch
 jobs:
   lint:
     name: Run lint
