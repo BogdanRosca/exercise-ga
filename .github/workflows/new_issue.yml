@@ -9,4 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print context
-        run: echo "${{ toJSON(github) }}"
+        run: echo "new_issue=${{ toJSON(github) }}"V
+      - name: Print issue details
+        run: |
+          echo "New issue called: ${{ github.issue.title }} was created:"
+          echo "\t created_at:${{ github.issue.created_at }}"
+          echo "\t url:${{ github.issue.url }}"
+          echo "\t description:${{ github.issue.body }}"
+        
